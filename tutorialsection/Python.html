@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Python</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+  <link href="../vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+</head>
+
+<body id="Page-Top">
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper" style="height: 100vh; overflow-y: scroll;">
+      <div class="sidebar-heading">Python</div>
+      <div class="list-group list-group-flush">
+        <a href="#Page-Top" class="list-group-item list-group-item-action bg-light">Intro</a>
+        <a href="#Install" class="list-group-item list-group-item-action bg-light">Installing Python</a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Install">Instructions - Shortened</a>
+          <a class="dropdown-item" href="#InstallFile">In-depth instructions <br>(PDF file)</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#packages" class="list-group-item list-group-item-action bg-light">Packages</a>
+        <a href="#First" class="list-group-item list-group-item-action bg-light">Running First Script</a>
+        <a href="#VariablesIntro" class="list-group-item list-group-item-action bg-light">Variables Intro</a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#VarTypes">Variable Types</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Operations">Operations</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Casting">Type Casting</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Concatenation">String Concatenation</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#Lists" class="list-group-item list-group-item-action bg-light">Lists</a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Indexing">Indexing of Lists</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Appending">Appending to Lists</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#IfElse" class="list-group-item list-group-item-action bg-light">If/Else Statements</a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#In">Using the "in" Keyword</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#Loops" class="list-group-item list-group-item-action bg-light">Loops</a>
+        <a href="#dataframe" class="list-group-item list-group-item-action bg-light">Pandas DataFrames</a>
+        <a href="#end" class="list-group-item list-group-item-action bg-light">From Here On...</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" style="position: fixed; width: 100vw;">
+        <button class="btn btn-primary" style="background-color: #13335a;" id="menu-toggle"><i class="fas fa-bars"></i></button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Python Basics
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="./BS4.html">Web Scraping using Beautiful Soup 4</a>
+                <a class="dropdown-item" href="./DataProcessing.html">Intro to Data Processing and ML</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="./PhysicsM.html">Physics Basics: Mechanics</a>
+                <a class="dropdown-item" href="./PhysicsE.html">Physics Basics: E&M</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="./NumTheory.html">Number Theory Basics</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="container">
+          <p style="margin-top: 10vh;">
+            <h1 class="mt-4">Intro</h1>
+            Welcome to the site! In these short segments, we will learn the basics of Python as fast as possible. As a preview of what is to come, in this section we will:<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Install Python and Anaconda: we will be using Anaconda (specifically Jupyter) to code, but you are free to use any compiler you like<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Basic to Python Variables<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- If/Else Statements<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Loops<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Pandas DataFrame:Basics<br><br>
+  
+            The goal of this series is to get you programming as fast as possible. As such, I would like to note that this tutorial section is far from complete. For more in-depth tutorials, there are 
+            options from reasources like W3 Schools. These will cover things as if you were in a traditional introductory class to programming in Python.<br><br>
+          </p>
+          <hr id="Install"> 
+          <p>
+            <h1 class="mt-4">Installing Python and Anaconda</h1>
+            1) Go to <a href="https://www.anaconda.com/products/individual">www.anaconda.com/products/individual</a> <br>
+            2) Scroll to the very bottom
+            <img src="./Img/Menu.jpg" alt="Page Bottom" style="width: 100%;">
+            3) Choose your OS and download the latest version of Python 3 <br> &nbsp;&nbsp;&nbsp;&nbsp; **(Python 3 is recommended, but Python 2 works just as well for the basics with a few syntax differences) <br>
+            4) Follow the instructions (click next a few times) - I have not changed the default settings except for where Anaconda is installed
+            <br>
+            <p id="InstallFile"></p> More in-depth instructions:
+            <a href="./PDFs/Instructions_for_installing_python.pdf" download>Download File</a>
+            <br><br>
+          </p>
+          <hr>
+          <p>
+            <h1 class="mt-4" id="First">First Python Script - Print "Hello World"</h1>
+            1) Using the windows search bar, search and open Jupyter Notebook <br>
+            <img src="./Img/Search.jpg" alt="Page Bottom" style="width: 50%;"><br><br>
+            2) Once you open Jupyter, you should arrive at a landing page with this menu at the top:
+            <img src="./Img/LandingPageBar.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            3) One the right side: Click "New" and then "Python 3". You should arrive at:
+            <img src="./Img/OriginCodePage.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            4) In the first cell, type: "print('Hello World')". The output should be:
+            <img src="./Img/HelloWorldOut.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            <br>
+            <p></p> Source Code:
+            <a href="./IPYNB/HelloWorld.ipynb" download>Download File</a>
+            <br><br>
+          </p>
+          <hr>
+          <p id="packages">
+            <h1 class="mt-4">What are packages?</h1>
+            Packages are prewritten pieces of code (methods and classes) that you can import to use. There are two main ones: Pandas and NumPy. There is also a keyword "as" which allows you to refer to an imported package with a different name. Here is an example:
+            <img src="./Img/package.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+          </p>
+          <hr>
+          <p>
+            <h1 class="mt-4" id="VariablesIntro">Variables in Python</h1>
+            For anyone with a bit of programming expierence, variables are largely no different in Python compared to other programming languages. The one thing to note is that you do not have to declare their type.
+            
+            <h4 class="mt-4" id="VarTypes">Types:</h4>
+            Variables in programming languages come in various different forms (i.e Strings, Integers, Floats). Here are a few common ones: <br><br>
+            <p style="margin-left: 40px;">
+              - str: Strings that contain a length of text. They are denoted with either a set of single quotes or double quotes.<br>
+              - int: Integers. Practically, the same as integers in math.<br>
+              - float: Floating point integers. Basically, decimal numbers.<br>
+              - bool: True/False variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;** We will cover this later, but there is an error called integer overflow. This happens when a number is too big for its data type.
+            </p>
+            To declare a variable use: VariableName = value. Here are some examples:
+            <img src="./Img/VarExample.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            In the first block of code, we set a variable named a to a value of 10. Same concept for the remaining blocks of code. In the last block of code, we can see that there is a "type()". Putting a variable in the middle of these parentheses will return the type of the variable.
+            <p></p> Source Code:
+            <a href="./IPYNB/VarExample.ipynb" download>Download File</a>
+            <br><br>
+
+            <h4 class="mt-4" id="Operations">Operations:</h4>
+            Since this is programming, it should come as no suprise that we can do math(and other stuff) with variables. Otherwise, programming would be useless. Instead of going through a few paragraphs explaining in detail what you can do, I will just list the most common ones(the ones I found most useful) as examples below:
+            <img src="./Img/NumOps.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            For numerics, you can basically do anything that you can do in normal math using the operators that normally define them on computers (i.e "x times y" is x*y). The two notable irregularities are: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; - "a to the power of b" is a**b <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; - "a greater than or equal to b" is a>=b (same for less than)<br><br>
+
+            There is also a section of CS called Boolean Algebra. Honestly, in my opinion its not that applicable in basic applications of programming and also not that interesting... &nbsp;&nbsp;&nbsp;&nbsp; 
+            <br><br>Realistically, all you need to know for now is boolean(bool) variables can interace with each other just as integers can, except the operators are "and" and "or". The most basic explaination is that "x and y" will produce a true outcome if both x,y are true. "x or y" will be true if (quite literally) x or y is true. These most likely will make more sense in practice when we go over them in If\Else statements.
+            <img src="./Img/Booleanops.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            <p></p> Source Code:
+            <a href="./IPYNB/booleanOps.ipynb" download>Download File</a>
+            <br><br>
+
+
+            <h4 class="mt-4" id="Casting">Type Casting:</h4>
+            In Python we can make a variable another type. This is called casting. This is done by: type_to_change_to(x). By doing the previous, we will change x to what ever type_to_change_to is. For example:
+            <img src="./Img/VarCast.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            <p></p> Source Code:
+            <a href="./IPYNB/VarCast.ipynb" download>Download File</a>
+            <br><br>
+
+            <h4 class="mt-4" id="Concatenation">String Concatenation:</h4>
+            Concatenation is the act of combining two strings. The only caveat is that they both have to be strings. You can't concatenate a string and an integer. Here's an example:
+            <img src="./Img/StringCat.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            <p></p> Source Code:
+            <a href="./IPYNB/StringConcat.ipynb" download>Download File</a>
+            <br><br>
+
+          </p>
+
+          <p id="Methods">
+            <h1 class="mt-4">Methods:</h1>
+            Simply, a method is a worker who you hand data two, he/she then processes the data, and returns the result of that processing to you. There are a lot of them that come predefined in python (i.e print() which we have been using to display variables). Here are some more useful ones:
+            <p style="margin-left: 40px;">
+              - print(): displays what is in the brackets <br>
+              - range(x,y): creates a list (we will go over what this is later) where the first element is x and the last element is y-1. 
+              - len(x): returns the length of x (if x is a string, think how many letters and spaces; if x is a list, think how many things are on that list ...)
+              - type(x): returns the type of variable x
+            </p>
+            Here are a few examples:
+            <img src="./Img/methodexamples.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+
+            <h4 class="mt-4" id="Casting">User Defined Methods:</h4>
+            What if we wanted to write our own method. We can write it using the following syntax:
+            <img src="./Img/definedmethod.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            In the example above, we have created a method that takes a number "x", preforms "y=x+1", and returns "y" to us. Note the variables in the first parentheses are the data that is passed in and the data in the line with the green return is what is given back to us. You can pass in multiple variables and return multiple datapoints, just seperate them with a comma.
+            <br><br>
+            <p></p> Source Code:
+            <a href="./IPYNB/Methods.ipynb" download>Download File</a>
+            <br><br>
+          </p>
+
+          <p id="Lists">
+            <h1 class="mt-4">List/Arrays:</h1>
+            There are times where we need to store multiple items in one variable. We do this by using lists. Also there is a small difference between list() and [], but it should not affect anything for now. What is a list? Literally, it means a list of variables.
+            <img src="./Img/listexample.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            In the example above, the list "a" contains the elements (in this case integers): 1,2,3,4,5
+            <h4 class="mt-4" id="Indexing">Index:</h4>
+            Every element in a list is labeled as a number. We can access each individual element in the list using this number. The numbers are always assigned the same way: the first element is zero and for each subsequent element the index is increased by 1.
+            <img src="./Img/indexing.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            From the example above, we can see that the first element "1" can be accessed with the "0th" index, the last element can be accessed with the "4th" index. Note, there are five elements in the list, but the indexes only go up to 4. Using an index of 5 will produce an error.
+
+            <h4 class="mt-4" id="Appending">Appending to Lists:</h4>
+            We can add elements to the list by using the .append() method. For example:
+            <img src="./Img/listappend.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+
+            Suprisingly or not, in a data analysis setting I have never had to take elements out of an array, but the method for that is .remove() or .pop(). The first one removes the first occurance of any element and the second removes the first element from a list.
+
+          </p>
+
+          <p id="IfElse">
+            <h1 class="mt-4">If/Else Statements:</h1>
+            We can incoperate logic into out programs by using if, elif, and else. Basically, we can say if (something1 is true) do something, if (something1 is not true and something2 is true) do something else, and if (everything is false) do a third thing. Here is an example:
+            <img src="./Img/elif.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            We don't actually need the elif or the else. If we only need to consider one condition:
+            <img src="./Img/ifonly.jpg" alt="Page Bottom" style="width: 100%;">
+            **If x < 10 in the case above, Python would do nothing<br><br>
+
+            <p id="In"></p>
+            One more useful if else statement is checking if a word is in a string. To do this, we use the "in" keyword. The "in" keyword hasn't come up yet in this series, but hopefully an example will clear things up:
+            <img src="./Img/stringifelse.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            <p></p> Source Code:
+            <a href="./IPYNB/IfElse.ipynb" download>Download File</a>
+            <br><br>
+            
+          </p>
+
+          <p id="Loops">
+            <h1 class="mt-4">Loops:</h1>
+            **Note: For this quick tutorial, we will only cover for-each loops. There are more types of loops, just I haven't found them to be very useful.<br>
+            As its names suggest, a loop repeats things over and over again, until some condition is met. The type of loop I found most useful is the for-each loop. It does exactly what the name suggests: for each element in a list, it does something with it. Here is an example:
+            <img src="./Img/foreachex1.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            In the example above, we have made a list of the numbers 1 through 5. We then used a for each loop to go through every element in the list, assign it to i, and printed i.
+          </p>
+          <p></p> Source Code:
+          <a href="./IPYNB/Loops.ipynb" download>Download File</a>
+          <br><br>
+          <hr>
+
+          <p id="dataframe">
+            <h1 class="mt-4">DataFrames:</h1>
+            Welcome to the bread and butter of analyzing data. Remenber the package called pandas we stated in the package section? It's quite literally the excel of Python. Any tabular data will most likely be arranged in a DataFrame.
+            <h4 class="mt-4" id="read">Reading data in from a file:</h4>
+            Here are the two files we will use for demostration: <a href="./Excel/Line.csv" download>Line.csv</a> and <a href="./Excel/Line.xlsx" download>Line.csv</a><br><br>
+            1) To read a file in Python, it first needs to be uploaded to Anaconda (there is another way around this using paths). To do so, navigate to the directory in Anaconda where your code is, then click upload.
+            <br>2) Import Pandas (we have also imported NumPy, this is optional but most of the time you have to do it anyways)
+            <br>3) Read the file using "read_csv(filename)" or "read_excel(filename)" depending on if it is a csv file or excel file.
+            <img src="./Img/read.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            **Note: the DataFrames above have not been saved to a variable!
+            <h4 class="mt-4" id="newcol">Adding a Column to a DataFrame:</h4>
+            We can make a new column using the following syntax (we add a column called "ID" with an array generated from the range method):
+            <img src="./Img/newcol.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            **Note: the array must be the same length as the number of rows in the dataframe!
+            <h4 class="mt-4" id="newrow">Adding a New Row:</h4>
+            We can also make add a new row of data using the append() method. Note: we can only add DataFrames to DataFrames, for now. Hence, we have to create a new DataFrame.
+            <img src="./Img/AppendRow.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            **Note: notice the space in the column name "Last Name ". This happend pretty often and will mess up if you don't have a space at the end!
+            <h4 class="mt-4" id="colnames">Getting Column Names:</h4>
+            We can do this by using a constant that comes with every DataFrame: .columns
+            <img src="./Img/colnames.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+            The constant contains an array of all the column names.
+            <h4 class="mt-4" id="iloc">.iloc</h4>
+            It would be pretty important for us to be able to get a specific row of the dataframe. To do that, we use the .iloc method:
+            <img src="./Img/iloc.jpg" alt="Page Bottom" style="width: 100%;"><br><br>
+          </p>
+          <hr>
+          <p id="end">
+            <h1 class="mt-4">From Here On...</h1>
+            This guide is far frome complete, but can be tailored for anyone who requests it. To request new topics/askquestions email me at: xiewuyou@utexas.edu. Thanks for comming along!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- /#page-content-wrapper -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
+
+  </div>
+  <!-- /#wrapper -->
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+<script src="../js/stylish-portfolio.min.js"></script>
+
+</body>
+
+</html>
