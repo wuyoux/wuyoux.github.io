@@ -20,15 +20,29 @@
 
 </head>
 
-<body>
+<body id="Page-Top">
 
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper" style="height: 100vh; overflow-y: scroll;">
-      <div class="sidebar-heading">Web Scraping using Beautiful Soup 4</div>
+      <div class="sidebar-heading">Python</div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Construction</a>
+        <a href="#Page-Top" class="list-group-item list-group-item-action bg-light"><b>Intro</b></a>
+        <a href="#BS4" class="list-group-item list-group-item-action bg-light"><b>Beautiful Soup 4 (BS4)</b></a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#WhatisBS4">What is Beautiful Soup 4?</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#UseBS4" class="list-group-item list-group-item-action bg-light"><b>Using BS4</b></a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#imports">Imports</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#URL">Opening a file via URL</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#tags">Using BS4 to search for tags</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#URLget" class="list-group-item list-group-item-action bg-light"><b>Getting URL's</b></a>
+        <a href="#end" class="list-group-item list-group-item-action bg-light" style="margin-bottom: 50px;"><b>Ending Note</b></a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -36,7 +50,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" style="position: fixed; width: 100vw;">
         <button class="btn btn-primary" style="background-color: #13335a;" id="menu-toggle"><i class="fas fa-bars"></i></button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,19 +80,104 @@
         </div>
       </nav>
 
-      <div class="container">
-        <h1>This page is still under construction, please come back later!<br><br><br><br><br><br><br><br><br><br><br></h1>
-      </div>
+      <div class="container-fluid">
+        <div class="container">
+          <p style="margin-top: 10vh;">
+            <h1 class="mt-4">Intro</h1>
+            In this segment, we will be going over the very basic elements of BS4:<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- How to install BS4<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Open a file using the URL<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Use Beautiful Soup 4 to process them<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- A short note on how to get URL's<br>
+  
+            <br> While testing, I noticed that the files open in the browser instead of downloading. You can change this in chrome settings or copy and paste the solutions into text files, and rename them to .ipynb files.<br><br>
+          </p>
+          <hr>
+          <h1 class="mt-4">Installing Beautiful Soup 4 (BS4)</h1>
+          <p>
+            The following sections will teach you how to scrape a website in Python:
+          </p>
+          <h4 class="mt-4" id="WhatisBS4">What is a Beautiful Soup 4 and how to install it?</h4>
+          <p>
+            Beautiful Soup 4 is a package in Python that allows for the scraping of HTML documents. We can use it to convert raw HTML files into a structure where we can search for certain tags. More in-depth explanations can be found at: <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">https://www.crummy.com/software/BeautifulSoup/bs4/doc/</a> 
+          </p>
+          <p>
+            Now to install BS4. This is made simple in Anaconda:
+            <p style="margin-left: 40px;">
+              1) Open Anaconda prompt<br>
+              2) Run "pip install beautifulsoup4"
+            </p>
+            <img src="./Img/BS4/pipinstall.jpg" alt="Page Bottom" style="width: 100%;">
+          </p>
+          <br>
+          <hr>
+          <h1 class="mt-4" id="UseBS4">Using BS4</h1>
+          <p>
+            BS4 is generally pretty easy to use, at least to do simple operations. In this section, we will run through an example of how to get data from a website using BS4. To make this slightly finance related, we will be using one <a href="https://www.sec.gov/Archives/edgar/data/320193/000032019319000119/0000320193-19-000119.txt">AAPL's 10-k filing</a> from the EDGAR database.
+          </p>
+          <h4 class="mt-4" id="imports">Necessary Imports</h4>
+          <p>
+            Apart from importing BS4, we need one other package (urllib.request) to open the file at the end of the URL. There are many other ways to do this, but this is the one I prefer. We also imported Pandas and NumPy as usual.
+          </p>
+          <img src="./Img/BS4/imports.jpg" alt="Page Bottom" style="width: 100%;">
+          <h4 class="mt-4" id="URL">How to open a file</h4>
+          <p>
+            From the short introduction to this section, you should be able to find the URL of the 10-K that we are going to use. Note, this is the raw text (literally the HTML of the page) of the 10-K, and personally I think this is easier then trying to get the HTML from the webpage that has all the visual enhancements. EDGAR has one of these for all documents published in its database. Now, we need to get the document behind the URL into python. This is where the urllib.request package comes in handy:
+          </p>
+          <img src="./Img/BS4/read.jpg" alt="Page Bottom" style="width: 100%;">
+          <p>
+            We can see by running the above lines of code, we get some version of the website in a form we can't really sort through, but BS4 can.
+          </p>
+          <h4 class="mt-4" id="tags">Using BS4 to find tags</h4>
+          <p>
+            In this example, we will try to get all the items within "&lt;table&gt;" ... "&lt;\table&gt;" tags in HTML. This corresponds to anything that is displayed as a table. We do this by:
+          </p>
+          <img src="./Img/BS4/findtable.jpg" alt="Page Bottom" style="width: 100%;">
+          <p>
+            We can see that now we have a list of all HTML code of items in tables from the 10-K in question. We can do this with any other tag by replacing the string in the find_all() method. Outputing this file to html would yield a crude but useable visual version of all tables in the text.
+          </p>
+          <br>
 
-    </div>
-    <!-- /#page-content-wrapper -->
+          <button class="collapsible">Exercises:</button>
+            <div class="contentcollapsible">
+              <br>
+              <p>
+                Get all the tables from this document: <a href = "https://www.sec.gov/Archives/edgar/data/1685715/000168571517000012/0001685715-17-000012.txt">https://www.sec.gov/Archives/edgar/data/1685715/000168571517000012/0001685715-17-000012.txt</a>
+              </p>
+              <p></p> Solution:
+              <a>Comming Soon</a>
+              <br><br>
+            </div>
+          <p></p> Source Code:
+          <a href="./IPYNB/Tutorial.ipynb" download>Download File</a>
+          <br><br>
+          <hr>
+          <h1 class="mt-4" id="URLget">A note on how to get URLs</h1>
+            <p>
+              Realistically, web scraping is only useful if you can do it on a wide number of documents. We hence need to obtain/generate the URL's of several documents. Usually, we can do this by analyzing the patterns within the URL, and generating new ones using the patterns we see. The EDGAR pattern is a bit more difficult, but I have modified a package to return the URL's for most major types of filings. I will be cleaning this up in the comming few days and hopefully releasing this soon.
+            </p>
+            <br>
+          <hr>
+
+          <h1 class="mt-4" id="end">In conclusion</h1>
+          This tutorial is once again very crude. Please feel free to contact me with any questions or corrections. In the near future, more will be likely added to this tutorial.<br><br><br><br>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- /#page-content-wrapper-->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
 
   </div>
   <!-- /#wrapper -->
 
+
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- Menu Toggle Script -->
   <script>
@@ -86,7 +185,66 @@
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
   </script>
+
+<script src="../js/stylish-portfolio.min.js"></script>
 
 </body>
 

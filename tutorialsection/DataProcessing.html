@@ -26,9 +26,16 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper" style="height: 100vh; overflow-y: scroll;">
-      <div class="sidebar-heading">Intro to Data Processing and ML</div>
+      <div class="sidebar-heading">Python</div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Construction</a>
+        <a href="#Page-Top" class="list-group-item list-group-item-action bg-light"><b>Intro</b></a>
+        <a href="#Install" class="list-group-item list-group-item-action bg-light"><b>Running a Linear Regression</b></a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Install">Instructions - Shortened</a>
+          <a class="dropdown-item" href="#InstallFile">In-depth instructions <br>(PDF file)</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#end" class="list-group-item list-group-item-action bg-light" style="margin-bottom: 50px;"><b>From Here On...</b></a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -36,7 +43,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" style="position: fixed; width: 100vw;">
         <button class="btn btn-primary" style="background-color: #13335a;" id="menu-toggle"><i class="fas fa-bars"></i></button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,26 +66,88 @@
                 <a class="dropdown-item" href="./PhysicsM.html">Physics Basics: Mechanics</a>
                 <a class="dropdown-item" href="./PhysicsE.html">Physics Basics: E&M</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="./NumTheory">Number Theory Basics</a>
+                <a class="dropdown-item" href="./NumTheory.html">Number Theory Basics</a>
               </div>
             </li>
           </ul>
         </div>
       </nav>
 
-      <div class="container">
-        <h1>This page is still under construction, please come back later!<br><br><br><br><br><br><br><br><br><br><br></h1>
-      </div>
+      <!-- <div class="container-fluid">
+        <div class="container">
+          <p style="margin-top: 10vh;">
+            <h1 class="mt-4">Intro</h1>
+            Welcome to the site! In these short segments, we will learn the basics of Python as fast as possible. As a preview of what is to come, in this section we will:<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Install Python and Anaconda: we will be using Anaconda (specifically Jupyter) to code, but you are free to use any compiler you like<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Run your first script<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- What packages are and how to install them<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Basic to Python variables<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- What methods are<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- What lists are<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- If/Else statements<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- Loops<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;- The basics of Pandas DataFrames<br><br>
+  
+            The goal of this series is to get you programming as fast as possible. As such, I would like to note that this tutorial section is far from complete. For more in-depth tutorials, there are 
+            options from resources like W3 Schools. These will cover things as if you were in a traditional introductory class to programming in Python. If you can complete the exercises in dataframes, by the end of all the sections, you have learned most of everything important in this overview.<br><br>
+            <br> While testing, I noticed that the files open in the browser instead of downloading. You can change this in chrome settings or copy and paste the solutions into text files, and rename them to .ipynb files.
+          </p>
 
-    </div>
+          <p style="margin-top: 10vh;">
+            <h1 class="mt-4">Running a Linear Regression using SKLearn</h1>
+            <p>
+              The following sections will teach you how to implement a linear regression in Python:
+            </p>
+            <h4 class="mt-4">What is a Linear Regression?</h4>
+            <p>
+              Anyone who has taken a high school statistics should know what a basic linear regression is. It is a process that take an input and output variable and tries to establish a relationship between them.
+              Noteablly, this relationship has to be of the form y = ax + b (the linear part in linear regression...). While most people know how to do this, linear regressions are often more complex. Think about it:
+              which outcome in the real world is actually only based on one input factor?
+            </p>
+            <p>
+              Realistically, we need a new definition to Linear Regressions.
+            </p>
+          </p>
+
+
+          <button class="collapsible">Exercises:</button>
+            <div class="contentcollapsible">
+              <br>
+              <p>
+                Just like excel, there are several dataframe tricks that you won't know until you've encountered them. These exercises are hard if you don't know them. Don't be discouraged!<br>
+                <br>1) Import the dataframe from the example. Using a for-each loop, print out every row in the example dataframe.<br>
+                2) Print only the 3rd row of the example dataframe<br>
+                3) Add on a new row to the dataframe with the contents: ""First Name":['Bill'],"Last Name":["North"],"Position in Line":[6]"<br>
+                4) Print the first name of the 4th person in the dataframe<br>
+                5) Find the first person in the line<br>
+                6) Export the revised dataframe to a CSV file named: "RevisedDataframe.csv"
+
+              </p>
+              <p></p> Solution:
+              <a href="./IPYNB/Dataframe-solution.ipynb" download>Download File</a>
+              <br><br>
+            </div>
+          <p></p> Source Code:
+          <a href="./IPYNB/Dataframe.ipynb" download>Download File</a>
+          <br><br>
+
+        </div>
+      </div>
+    </div> -->
+
     <!-- /#page-content-wrapper -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
 
   </div>
   <!-- /#wrapper -->
 
+
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- Menu Toggle Script -->
   <script>
@@ -86,7 +155,66 @@
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
   </script>
+
+<script src="../js/stylish-portfolio.min.js"></script>
 
 </body>
 
