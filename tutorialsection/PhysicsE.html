@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Physics: E&M</title>
+  <title>Physics Basics: E&M</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,15 +20,69 @@
 
 </head>
 
-<body>
+<body id="Page-Top">
 
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper" style="height: 100vh; overflow-y: scroll;">
-      <div class="sidebar-heading">Physics: E&M</div>
+      <div class="sidebar-heading">Python</div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Construction</a>
+        <a href="#Page-Top" class="list-group-item list-group-item-action bg-light"><b>Intro</b></a>
+        <a href="#DotProd" class="list-group-item list-group-item-action bg-light"><b>Dot Products</b></a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#DotProdAng">Angles using Dot Products</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#CrossProd" class="list-group-item list-group-item-action bg-light"><b>Cross Products</b></a>
+        <!-- <a href="#Install" class="list-group-item list-group-item-action bg-light"><b>Installing Python</b></a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Install">Instructions - Shortened</a>
+          <a class="dropdown-item" href="#InstallFile">In-depth instructions <br>(PDF file)</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#First" class="list-group-item list-group-item-action bg-light"><b>Running First Script</b></a>
+        <a href="#packages" class="list-group-item list-group-item-action bg-light"><b>Packages</b></a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#InstallPackage">Installing a Custom Package</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#VariablesIntro" class="list-group-item list-group-item-action bg-light"><b>Variables Intro</b></a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#VarTypes">Variable Types</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Operations">Operations</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Casting">Type Casting</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Concatenation">String Concatenation</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#Methods" class="list-group-item list-group-item-action bg-light"><b>Methods</b></a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#UserMethods">User-Defined Methods</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#Lists" class="list-group-item list-group-item-action bg-light"><b>Lists</b></a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Indexing">Indexing of Lists</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#Appending">Appending to Lists</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#IfElse" class="list-group-item list-group-item-action bg-light"><b>If/Else Statements</b></a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#In">Using the "in" Keyword</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a>
+        <a href="#Loops" class="list-group-item list-group-item-action bg-light"><b>Loops</b></a>
+        <a href="#dataframe" class="list-group-item list-group-item-action bg-light"><b>Pandas DataFrames</b></a>
+        <a class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#read">Reading in Data</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#newcol">Adding New Columns</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#newrow">Adding New Rows</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#colnames">Getting Column Names</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#iloc">.iloc[]</a>
+          <a class="dropdown-item" style="margin-top: 5px; margin-bottom: 5px;" href="#export">Exporting Data</a>
+          <div class="dropdown-divider" style="margin-bottom: 0; margin-top: 0;"></div>
+        </a> -->
+        <!-- <a href="#end" class="list-group-item list-group-item-action bg-light" style="margin-bottom: 50px;"><b>From Here On...</b></a> -->
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -36,7 +90,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" style="position: fixed; width: 100vw;">
         <button class="btn btn-primary" style="background-color: #13335a;" id="menu-toggle"><i class="fas fa-bars"></i></button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,19 +120,110 @@
         </div>
       </nav>
 
-      <div class="container">
-        <h1>This page is still under construction, please come back later!<br><br><br><br><br><br><br><br><br><br><br></h1>
-      </div>
+      <div class="container-fluid">
+        <div class="container">
+          <p style="margin-top: 10vh;">
+            <h1 class="mt-4" id="intro">Intro</h1>
+              Welcome to PHY 303L!<br>
+              Also a slight disclaimer: This is a study tool made from my point of view. If it doesn't make sense or you want a more in-depth explanation into anything, email me or any of the TA's, LA's, or go to office hours (plus discussions). I can't stress how beneficial a good math background is!!
+              Also slight disclaimer 2: My spelling <s>sometimes</s> always pretty bad. If there is a mistake here, please let me know. Thanks!
+              <br>
+              <br>
+              Note:
+            <br> While testing, I noticed that the files open in the browser instead of downloading. I will try to find a better solution, but as of right now if this affects you, just let me know.</p>
+          </p>
+          <hr>
+          <p>
+            <h1 class="mt-4" id="DotProd">Dot Products</h1>
+            In the first two lectures, we have introduced a few things concerning vector mathematics. I felt a tad bit guilty on not being able to explain very well what a dot and cross product were in class, so I am going to put some supplementary explanation here:
+            <br>
+            <br>
+            We first start with what is a dot product. Let us define two vectors for ease of explanation: Vector A = <1,2,3> and Vector B = <1,0,1>. To find the dot product of these two elements we simply take each component of Vector A and multiply it with the component in the same position in Vector B. Like this:
+            <br>
+            <br>
+            <img src="./Img/PHYE/dotproductwithnum.png" alt="Page Bottom" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+            <br>
+            Great, now how would we do it for any general vector? It is pretty much the same process. This time let Vector A = &lt;a,b,c&gt; and Vector B = &lt;d,e,f&gt;:<br><br>
+            <img src="./Img/PHYE/dotprodgenerat.png" alt="Page Bottom" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+            <br>
+          </p>
+          <hr>
+          <p>
+            <h1 class="mt-4" id="DotProdAng">Angle Between Two Vectors using Dot Products</h1>
+            Let us use the two vectors from before: Vector A = &lt;1,2,3&gt; and Vector B = &lt;1,0,1&gt;. We already know the dot product between the two is 4. What would the angle between the two be?
+            <br>
+            <br>
+            If your first instinct is to go grab a protractor, don't? There are a few good reasons for this, but the first one is how are you going to measure the angle between two vectors on a 2D page when the vectors are 3D? Instead, let's use dot products. Remember the other definition of dot product?
+            <br>
+            <br>
+            <img src="./Img/PHYE/def2.png" alt="Page Bottom" style="display: block; margin-left: auto; margin-right: auto;">
+            <br>
+            On the right-hand side (RHS), we see the dot product of Vectors A and B. On the left-hand side (LHS), we see the magnitude of Vector A times the magnitude of Vector B times the cosine of the angle between them. By the way, the absolute value bars around a vector mean magnitude (or length of the vector). The equation above can be manipulated to give us the angle:
+            <br>
+            <br>
+            <img src="./Img/PHYE/angleder.png" alt="Page Bottom" style="display: block; margin-left: auto; margin-right: auto;">
+            <br>
+            Back to the example above with Vector A = &lt;1,2,3&gt; and Vector B = &lt;1,0,1&gt;, we can see by filling in values:
+            <br>
+            <br>
+            <img src="./Img/PHYE/anglesol.png" alt="Page Bottom" style="display: block; margin-left: auto; margin-right: auto;">
+            <br>
+          </p>
+          <hr>
+          <p>
+            <h1 class="mt-4" id="CrossProd">Cross Products</h1>
+            We also went over cross products during the lecture, but there were some struggles with matrix multiplication. This is not a problem, but it does make memorizing the math behind cross products a bit harder. Strictly speaking, you could (maybe) get by by memorizing the following formula, given Vector A = &lt;a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>&gt; and Vector B = &lt;b<sub>1</sub>,b<sub>2</sub>,b<sub>3</sub>&gt;:
+            <br>
+            <br>
+            <img src="./Img/PHYE/crossgen.png" alt="Page Bottom" style="display: block; margin-left: auto; margin-right: auto;">
+            <br>
+            I found this hard to memorize the first time I had to do cross products. There is a (semi-mathematically correct) matrix method which will always produce the right answer, but strictly speaking, makes no real mathematical sense (~ish). A nice explanation of this can be found at:<br>
+            <br>
+            <a href="https://tutorial.math.lamar.edu/classes/calcii/crossproduct.aspx">Paul's Online Notes</a> (very good for any calculus!!)
+            <br><br>
+          </p>
+          <!-- <button class="collapsible">Exercises:</button>
+            <div class="contentcollapsible">
+              <br>
+              <p>
+                Just like excel, there are several dataframe tricks that you won't know until you've encountered them. These exercises are hard if you don't know them. Don't be discouraged!<br>
+                <br>1) Import the dataframe from the example. Using a for-each loop, print out every row in the example dataframe.<br>
+                2) Print only the 3rd row of the example dataframe<br>
+                3) Add on a new row to the dataframe with the contents: ""First Name":['Bill'],"Last Name":["North"],"Position in Line":[6]"<br>
+                4) Print the first name of the 4th person in the dataframe<br>
+                5) Find the first person in the line<br>
+                6) Export the revised dataframe to a CSV file named: "RevisedDataframe.csv"
 
+              </p>
+              <p></p> Solution:
+              <a href="./IPYNB/Dataframe-solution.ipynb" download>Download File</a>
+              <br><br>
+            </div>
+          <p></p> Source Code:
+          <a href="./IPYNB/Dataframe.ipynb" download>Download File</a>
+          <br><br>
+          <hr> -->
+          <!-- <button class="collapsible">Open Collapsible</button>
+          <div class="contentcollapsible">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div> -->
+        </div>
+      </div>
     </div>
+
     <!-- /#page-content-wrapper -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
 
   </div>
   <!-- /#wrapper -->
 
+
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- Menu Toggle Script -->
   <script>
@@ -86,7 +231,66 @@
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
   </script>
+
+<script src="../js/stylish-portfolio.min.js"></script>
 
 </body>
 
